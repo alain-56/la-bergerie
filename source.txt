@@ -1,0 +1,225 @@
+indi_id: 1
+indi_nom: HERVY- HERVI
+indi_prenom: Jacques Jean
+indi_deces_date: 01 FEV 1746
+indi_deces_lieu_abr: B
+indi_deces_info: 72 ans
+deces_temoin_liste: [('PERRÉ', 'Joseph', None, 'beau-frère'), ('HERVY', 'Janne', None, 'soeur')]
+--------------------------
+indi_id: 2
+indi_nom: HERVY- HERVI
+indi_deces_date: 15 SEP 1721
+indi_deces_lieu_abr: B
+indi_deces_info: 
+deces_temoin_liste: [('HUET', 'Jeanne', None, 'soeur'), ('BRUC', 'Julien', None, 'beau-frère')]
+union_date: 29 AVR 1697
+union_lieu_abr: V
+union_conjoint: HUET Michelle
+--------------------------
+indi_id: 3
+indi_nom: HERVY- HERVI
+indi_prenom: Jean
+indi_naissance_date: 12 NOV 1714
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: COUÉ
+parrain_prenom: Jean
+parrain_lieu_abr: B
+marraine_nom: HUET
+marraine_prenom: Jeanne
+marraine_lieu_abr: B
+indi_deces_date: 29 SEP 1719
+indi_deces_lieu_abr: B
+indi_deces_info: 
+deces_temoin_liste: [('COUÉ', 'Jean', None, None)]
+--------------------------
+indi_id: 4
+indi_nom: HERVY- HERVI
+indi_prenom: Julien
+indi_naissance_date: 25 JAN 1718
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: HUET
+parrain_prenom: Julien
+parrain_lieu_abr: B
+marraine_nom: HERVY
+marraine_prenom: Jeanne
+marraine_info: Provotaye
+indi_deces_date: 22 MAR 1718
+indi_deces_lieu_abr: B
+indi_deces_info: 
+--------------------------
+indi_id: 5
+indi_nom: HERVY- HERVI
+indi_prenom: Joseph
+indi_naissance_date: 09 DEC 1720
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: SEGUIN
+parrain_prenom: Joseph
+parrain_lieu_abr: B
+marraine_nom: CHÉNAIS
+marraine_prenom: Marie
+marraine_lieu_abr: B
+indi_deces_date: 25 FEV 1724
+indi_deces_lieu_abr: B
+indi_deces_info: 
+deces_temoin_liste: [('CAVALON', 'Julienne', None, 'belle-mère'), ('HUET', 'Janne', None, 'tante')]
+--------------------------
+indi_id: 6
+indi_nom: HERVY- HERVI
+indi_deces_date: 28 DEC 1767
+indi_deces_lieu_abr: B
+indi_deces_info: 72 ans
+deces_temoin_liste: [('TASTART', 'Jeanne', None, 'brue'), ('HUET', 'Julienne', None, None), ('CHESNAY', 'Pierre', None, None)]
+union_date: 20 NOV 1721
+union_lieu_abr: V
+union_conjoint: CAVALON Julienne
+--------------------------
+indi_id: 7
+indi_nom: HERVY- HERVI
+indi_prenom: Marc
+indi_naissance_date: 04 OCT 1722
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: HUET
+parrain_prenom: Marc
+parrain_lieu_abr: B
+marraine_nom: ESPIART
+marraine_prenom: Claudine
+--------------------------
+indi_id: 8
+indi_nom: HERVY- HERVI
+indi_prenom: Julienne
+indi_naissance_date: 26 OCT 1723
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: TASTART
+parrain_prenom: Jan
+marraine_nom: HUET
+marraine_prenom: Julienne Janne
+indi_deces_date: 03 AOU 1726
+indi_deces_lieu_abr: B
+indi_deces_info: 
+--------------------------
+indi_id: 9
+indi_nom: HERVY- HERVI
+indi_prenom: Yves
+indi_naissance_date: 16 FEV 1726
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: COUÉ
+parrain_prenom: Yves
+parrain_lieu_abr: B
+marraine_nom: CAVALON
+marraine_prenom: Louise
+marraine_info: Haiute-Bredaye
+--------------------------
+indi_id: 10
+indi_nom: HERVY- HERVI
+indi_prenom: Janne
+indi_naissance_date: 24 AVR 1728
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: HUET
+parrain_prenom: Jan
+parrain_lieu_abr: B
+marraine_nom: RUBAU
+marraine_prenom: Janne
+marraine_lieu_abr: B
+--------------------------
+indi_id: 11
+indi_nom: HERVY- HERVI
+indi_prenom: Yves
+indi_deces_date: 28 DEC 1728
+indi_deces_lieu_abr: B
+indi_deces_info: 3 ans
+deces_temoin_liste: [('SEGUIN', 'Joseph', None, None)]
+--------------------------
+indi_id: 12
+indi_nom: HERVY- HERVI
+indi_prenom: Louise
+indi_naissance_date: 26 MAI 1729
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: HERVY
+parrain_prenom: Jan
+parrain_lieu_abr: B
+indi_deces_date: 10 JAN 1732
+deces_temoin_liste: [('HERVY', 'Jan', None, None)]
+--------------------------
+indi_id: 13
+indi_nom: HERVY- HERVI
+indi_prenom: Pierre Jacques
+indi_naissance_date: 21 FEV 1732
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: PERRÉ
+parrain_prenom: Pierre
+marraine_nom: DANART
+marraine_prenom: Anne
+marraine_info: Laboureur
+indi_deces_date: 1765
+indi_deces_lieu_abr: B
+indi_deces_info: date incomplète: 0-9-1765
+noyé dans l'Aff, 35 ans
+deces_temoin_liste: [('CAVALON', 'Jeanne', None, 'mère'), ('TASTART', 'Charles', None, None), ('TASTART', 'Joseph', None, None), ('TATART', 'Janne Nicole', None, None)]
+conjoint_nom: TATART
+conjoint_prenom: Janne Nicole
+--------------------------
+indi_id: 14
+indi_nom: HERVY- HERVI
+indi_prenom: Joseph Julien
+indi_naissance_date: 10 MAR 1754
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: MORICE
+parrain_prenom: Joseph
+marraine_nom: TATART
+marraine_prenom: Julienne
+--------------------------
+indi_id: 15
+indi_nom: HERVY- HERVI
+indi_prenom: Anne
+indi_naissance_date: 28 AVR 1758
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: TASTART
+parrain_prenom: Charles
+marraine_nom: MÉTAYER
+marraine_prenom: Anne
+--------------------------
+indi_id: 16
+indi_nom: HERVY- HERVI
+indi_prenom: Pierre Vincent
+indi_naissance_date: 05 SEP 1761
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: AUVRAY
+parrain_prenom: Pierre
+marraine_nom: TOUDROIT
+marraine_prenom: Louise
+indi_deces_date: 07 MAR 1768
+indi_deces_lieu_abr: B
+indi_deces_info: 
+deces_temoin_liste: [('TASTART', 'Julienne', None, 'tante'), ('PARIS', 'Marc', None, None)]
+--------------------------
+indi_id: 17
+indi_nom: HERVY- HERVI
+indi_prenom: Renée
+indi_naissance_date: 04 OCT 1764
+indi_naissance_lieu_abr: B
+indi_naissance_info: 
+parrain_nom: TASTART
+parrain_prenom: Charles
+marraine_nom: NOBLET
+marraine_prenom: Renée
+--------------------------
+indi_id: 18
+indi_nom: HERVY- HERVI
+indi_prenom: Julien
+indi_deces_date: 09 JUL 1734
+indi_deces_lieu_abr: B
+indi_deces_info: 9 mois
+deces_temoin_liste: [('HERVY', 'Jan', 'B', None)]
+--------------------------
