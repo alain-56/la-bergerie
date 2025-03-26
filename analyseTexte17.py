@@ -25,8 +25,64 @@ import csv
 
 import tkinter as tk
 from tkinter import simpledialog, messagebox
-#*********************************************
 
+
+#*********************************************
+# PRENON > SEXE
+
+# Chemin du fichier CSV
+csv_file_path = r"C:\Users\et\eclipse-workspace\Divers\prenom-sexe.csv"
+
+# Fonction pour rechercher un prénom dans le fichier CSV
+def search_prenom(prenom):
+    with open(csv_file_path, mode='r', newline='', encoding='latin-1') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[0].lower() == prenom.lower():
+                return row[1]
+    return None
+
+# Fonction pour ajouter un prénom au fichier CSV
+def add_prenom(prenom, sexe):
+    rows = []
+    with open(csv_file_path, mode='r', newline='', encoding='latin-1') as file:
+        reader = csv.reader(file)
+        rows = list(reader)
+    
+    rows.append([prenom, sexe])
+    rows = sorted(rows, key=lambda x: x[0].lower())
+    
+    with open(csv_file_path, mode='w', newline='', encoding='latin-1') as file:
+        writer = csv.writer(file)
+        writer.writerows(rows)
+
+# Fonction pour demander l'ajout d'un prénom
+def prompt_add_prenom(prenom):
+    root = tk.Tk()
+    root.withdraw()  # Cacher la fenêtre principale
+    root.attributes('-topmost', True)  # Placer la fenêtre devant les autres
+    root.after(0, root.focus_force)  # Forcer le focus sur la fenêtre
+
+    sexe = simpledialog.askstring("Ajouter un prénom", f"Le prénom '{prenom}' n'existe pas. Entrez le sexe (m, f, ou mf) :")
+    if sexe and sexe.lower() in ['m', 'f', 'mf']:
+        add_prenom(prenom, sexe.lower())
+        messagebox.showinfo("Succès", f"Le prénom '{prenom}' a été ajouté avec le sexe '{sexe}'.", parent=root)
+    else:
+        messagebox.showerror("Erreur", "Sexe invalide. L'ajout a été annulé.", parent=root)
+
+    root.destroy()  # Détruire la fenêtre Tkinter après utilisation
+
+# Fonction pour déterminer le sexe à partir du prénom
+def determine_sexe(prenom):
+    sexe = search_prenom(prenom)
+    
+    if sexe:
+        print(f"Le prénom '{prenom}' existe avec le sexe '{sexe}'.")
+    else:
+        print(f"Le prénom '{prenom}' n'existe pas.")
+        prompt_add_prenom(prenom)
+        
+#*********************************************
 
         
 # Chemin du fichier texte
@@ -640,7 +696,8 @@ if __name__ == "__main__":
         
         # =============================
         
-
+        indi_prenom = None
+        indi_sexe = None
         indi_sexe = determine_sexe(indi_prenom)
 
         if not os.path.exists(csv_file_path):
