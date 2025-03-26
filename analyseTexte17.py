@@ -695,10 +695,11 @@ if __name__ == "__main__":
         i = 1   # le nom de famille est lu, débuter le traitement du texte à la ligne suivante
         
         # =============================
-        
-        indi_prenom = None
-        indi_sexe = None
-        indi_sexe = determine_sexe(indi_prenom)
+
+        if indi_prenom:
+            indi_sexe = determine_sexe(indi_prenom)
+        else:
+            indi_sexe = None 
 
         if not os.path.exists(csv_file_path):
             with open(csv_file_path, mode='w', newline='', encoding='latin-1') as file:
