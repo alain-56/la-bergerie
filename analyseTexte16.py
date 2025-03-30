@@ -20,6 +20,15 @@ from datetime import datetime
 from fontTools.ttLib.tables.E_B_D_T_ import BitAlignedBitmapMixin
 from pickle import NONE
 
+#*********************************************
+import csv
+
+import tkinter as tk
+from tkinter import simpledialog, messagebox
+#*********************************************
+
+
+        
 # Chemin du fichier texte
 texteDir = r"C:\Users\et\eclipse-workspace\Genealogie\source"
 #texteFile = "MONTEST.txt"
@@ -171,7 +180,7 @@ def extract_union_info(ligne):
 
                            
     match = re.search(patterns['union'], ligne)
-    print(match)                                                   
+                                                 
     if match:
         chaineunion = normalize_spaces(match.group(2))
         chaineunion = re.sub(r'[;,]', '', chaineunion)  # Suppression des virgules et points-virgules avec regex
@@ -274,7 +283,9 @@ def ajouter_info(texte, nouveau_contenu):
 
 
 # Function to parse the information
-def parse_line(ligne, indi_id, parent_id_pere=None, parent_id_mere=None):
+def parse_line(line, indi_id, indi_sexe, parent_id_pere, parent_id_mere, couple_id_homme, couple_id_femme):
+  
+
     # Ajout des initialisations pour les nouvelles variables parent et couple
     parent = [parent_id_pere, parent_id_mere]
     couple = [couple_id_homme, couple_id_femme]
@@ -285,6 +296,7 @@ def parse_line(ligne, indi_id, parent_id_pere=None, parent_id_mere=None):
     # Informations sur l'individu
     indi_nom = None
     indi_prenom = None
+    
     indi_info = None
     nomprenom = []
     
@@ -301,7 +313,7 @@ def parse_line(ligne, indi_id, parent_id_pere=None, parent_id_mere=None):
     indi_naissance_date = None
     indi_naissance_lieu_abr = None
     indi_naissance_info = None
-    indi_sexe = None
+    
 
     # Informations sur le parrain
     chaineparrain = None
@@ -339,7 +351,7 @@ def parse_line(ligne, indi_id, parent_id_pere=None, parent_id_mere=None):
     
     date_pattern = r'\b(\d{1,2}-\d{1,2}-\d{2,4}|\d{1,2}-\d{4}|\d{4})(?:\s*\(([^)]+)\))?'
 
-    
+
 
     # *************************************************************
     # Extracting PRENOM INDIVIDU
@@ -359,7 +371,8 @@ def parse_line(ligne, indi_id, parent_id_pere=None, parent_id_mere=None):
     # Vérifier si indi_prenom est vide, le définir à None
     if not indi_prenom:
         indi_prenom = None        
-        
+    
+    indi_sexe = 'm'
         
     # *************************************************************
     # Extracting UNION
@@ -556,6 +569,7 @@ def parse_line(ligne, indi_id, parent_id_pere=None, parent_id_mere=None):
         "indi_id": indi_id,
         "indi_nom": indi_nom,
         "indi_prenom": indi_prenom,
+        "indi_sexe": indi_sexe,
         "indi_info": indi_info,
         "indi_naissance_date": indi_naissance_date,
         "indi_naissance_lieu_abr": indi_naissance_lieu_abr,
@@ -609,10 +623,7 @@ if __name__ == "__main__":
     # Process the rest of the file as paragraphs
     paragraphs = "\n".join(lines[0:]).split("\n\n") # débuter à la ligne 1 nom de famille
 
-    parent_id_pere = None
-    parent_id_mere = None    
-    couple_id_homme = None
-    couple_id_femme = None
+
     
     for paragraph in paragraphs:
         paragraph_lines = paragraph.split('\n')
@@ -630,7 +641,14 @@ if __name__ == "__main__":
         i = 1   # le nom de famille est lu, débuter le traitement du texte à la ligne suivante
         
         # =============================
-        indi_sexe = 'F'
+        
+        indi_sexe = None
+        parent_id_pere = None
+        parent_id_mere = None    
+        couple_id_homme = None
+        couple_id_femme = None
+
+
 
         while i < len(paragraph_lines):
             ligne = paragraph_lines[i]
@@ -644,10 +662,10 @@ if __name__ == "__main__":
                     parse_line(combined_line, indi_id, indi_sexe, parent_id_pere, parent_id_mere, couple_id_homme, couple_id_femme)
                     combined_line = ""
                 if contient_balise(ligne, balises_union):
-                    if indi_sexe == 'F':
+                    if indi_sexe == 'f':
                         parent_id_mere = indi_id  # Mettre à jour l'identifiant de la mère
                         couple_id_femme = indi_id
-                    elif indi_sexe == 'M':
+                    elif indi_sexe == 'm':
                         parent_id_pere = indi_id  # Mettre à jour l'identifiant du père
                         couple_id_homme = indi_id
                     indi_id += 1  # Increment person ID for each new union
