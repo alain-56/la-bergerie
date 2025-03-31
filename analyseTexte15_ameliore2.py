@@ -219,7 +219,7 @@ def ajouter_info(texte, nouveau_contenu):
         texte = nouveau_contenu
     return texte
 
-def parse_line(ligne, indi_id):
+def parse_line(ligne, indi_id, famille_nom):
     info = GenealogyInfo()
     info.indi_id = indi_id
 
@@ -403,7 +403,7 @@ def main():
                 i += 1  # Sauter la ligne suivante
             if contient_balise(ligne, balises):
                 if combined_line:
-                    info = parse_line(combined_line, indi_id)
+                    info = parse_line(combined_line, indi_id, famille_nom)
                     print(info.__dict__)  # Afficher les informations extraites
                     combined_line = ""
                 if contient_balise(ligne, balises_union):
@@ -417,7 +417,7 @@ def main():
                 combined_line += ' ' + ligne.strip()
             i += 1
         if combined_line:
-            info = parse_line(combined_line, indi_id)
+            info = parse_line(combined_line, indi_id, famille_nom)
             print(info.__dict__)  # Afficher les informations extraites
 
 if __name__ == "__main__":
