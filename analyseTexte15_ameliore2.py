@@ -369,7 +369,7 @@ def parse_line(ligne, indi_id, famille_nom):
             if '(' in chainetemoindeces and ')' in chainetemoindeces:
                 temoin_lieu_abr = chainetemoindeces.split('(', 1)[1].split(')', 1)[0].strip()
             info = temoin_parts[1].strip() if len(temoin_parts) > 1 else None
-            info.deces_temoin_liste.append((temoin_nom, temoin_prenom, temoin_lieu_abr, info))
+            info.deces_temoin_liste.append((temoin_nom, temoin_prenom, temoin_lieu_abr, temoin_info))
 
     return info
 
